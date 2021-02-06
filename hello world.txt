@@ -9,3 +9,17 @@ I want Xiao C6 but I don't have money enough to pay. ;(
 
 I can push my edited doc on GitHub Desktop to my repository on GitHub Web.
 But I can't used Sourcetree to push! Why! WTH.
+
+I will to cry now.
+
+git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks push -v --tags origin master:master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Jumptothehell/MoretimestoTRY.git/'
+
+Pushing to https://github.com/Jumptothehell/MoretimestoTRY.git
+Completed with errors, see above.
+
+I---
+
+Try to push in Sourcetree again.
+If it can use, this doc will end.

@@ -6,3 +6,6 @@ ngong pai mot mai tam leaw!
 
 My money for Xiao.
 I want Xiao C6 but I don't have money enough to pay. ;(
+
+I can push my edited doc on GitHub Desktop to my repository on GitHub Web.
+But I can't used Sourcetree to push! Why! WTH.

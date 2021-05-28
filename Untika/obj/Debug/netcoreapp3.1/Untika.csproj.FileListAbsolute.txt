@@ -1,0 +1,13 @@
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.exe
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.deps.json
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.runtimeconfig.json
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.runtimeconfig.dev.json
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.dll
+C:\Users\HOME\source\repos\Untika\bin\Debug\netcoreapp3.1\Untika.pdb
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.csprojAssemblyReference.cache
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.AssemblyInfoInputs.cache
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.AssemblyInfo.cs
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.csproj.CoreCompileInputs.cache
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.dll
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.pdb
+C:\Users\HOME\source\repos\Untika\obj\Debug\netcoreapp3.1\Untika.genruntimeconfig.cache

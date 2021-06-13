@@ -4,76 +4,57 @@ namespace Tester
 {
     class Program
     {
+        struct Item
+        {
+            public string nameofItem;
+            public string TypeofItem;
+
+            public Item(string Name, string Type)
+            {
+                nameofItem = Name;
+                TypeofItem = Type;
+            }
+
+        }
+
         static void Main(string[] args)
         {
-            string[] storenumber = new string [999999];
-            int i = 0;
-            bool WhenisEND = false;
-            while (WhenisEND == false)
+            int Itembox = int.Parse(Console.ReadLine());
+            Item[] listofItem = new Item[Itembox];
+            for (int i = 0; i < Itembox; i++)
             {
-                storenumber[i] = Console.ReadLine();
-                if (storenumber[i] == "End")
-                {
-                    WhenisEND = true;
-                }
-                i++;
+                listofItem[i].nameofItem = Console.ReadLine();
+                listofItem[i].TypeofItem = Console.ReadLine();
             }
-
-            int lenghtofstorenumberonly = 0;
-            for (int j = 1; j < storenumber.Length; j++)
+            
+            bool maiyaktamlaew = false;
+            string message = Console.ReadLine();
+            while (maiyaktamlaew == false)
             {
-                if (storenumber[j] == "End")
+                for (int i = 0; i < Itembox; i++)
                 {
-                    lenghtofstorenumberonly = j;
-                }                    
-            }
+                    if (message == "ShowAll")
+                    {
+                        Console.WriteLine(listofItem[i].nameofItem);
+                        Console.WriteLine(listofItem[i].TypeofItem);
+                        Console.WriteLine();
+                        message = Console.ReadLine();
+                    }
+                    else if (message == listofItem[i].TypeofItem)
+                    {
+                        Console.WriteLine(listofItem[i].nameofItem);
+                        Console.WriteLine();
+                        message = Console.ReadLine();
+                    }
 
-            double[] storenumberonly = new double[lenghtofstorenumberonly];
-            for (int j = 0; j < lenghtofstorenumberonly; j++)
-            {
-                storenumberonly[j] = double.Parse(storenumber[j]);
-            }
-
-            double max = storenumberonly[0];
-            double min = storenumberonly[0];
-            double total = 0;
-
-
-            bool InvalidMode = false;
-            while (InvalidMode == false)
-            {
-                string Find = "0";
-                Find = Console.ReadLine();
-                for (int m = 0; m < storenumberonly.Length; m++)
-                {
-                    if (max < storenumberonly[m])
-                    { max = storenumberonly[m]; }
-                    if (min > storenumberonly[m])
-                    { min = storenumberonly[m]; }
-                    total += storenumberonly[m];
+                    else
+                    {
+                        Console.WriteLine("End");
+                        maiyaktamlaew = true;
+                    }
                 }
-                double mean = total / storenumberonly.Length;
-                if (Find == "FindMax")
-                {
-                    Console.WriteLine(max);
-                    InvalidMode = true;
-                }
-                else if (Find == "FindMim")
-                {
-                    Console.WriteLine(min);
-                    InvalidMode = true;
-                }
-                else if (Find == "FindMean")
-                {
-                    Console.WriteLine(mean);
-                    InvalidMode = true;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid mode");
-                }
-
-            }
+            } 
+            Console.ReadLine();
         }
     }
 }

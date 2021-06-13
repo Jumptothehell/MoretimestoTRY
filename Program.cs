@@ -6,60 +6,74 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            int[,] numberinput09 = new int[3, 3];
-            for (int i = 0; i < 3; i++)
+            string[] storenumber = new string [999999];
+            int i = 0;
+            bool WhenisEND = false;
+            while (WhenisEND == false)
             {
-                for (int j = 0; j < 3; j++)
+                storenumber[i] = Console.ReadLine();
+                if (storenumber[i] == "End")
                 {
-                    numberinput09[i, j] = int.Parse(Console.ReadLine());
+                    WhenisEND = true;
                 }
+                i++;
             }
-            int ifihaveanumberyet = int.Parse(Console.ReadLine());
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(numberinput09[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-            Console.ReadLine();
 
-            int[,] newnumberintput19 = new int[3, 3];
-            string Available = "0";
+            int lenghtofstorenumberonly = 0;
+            for (int j = 1; j < storenumber.Length; j++)
+            {
+                if (storenumber[j] == "End")
+                {
+                    lenghtofstorenumberonly = j;
+                }                    
+            }
 
-            for (int i = 0; i < 3; i++)
+            double[] storenumberonly = new double[lenghtofstorenumberonly];
+            for (int j = 0; j < lenghtofstorenumberonly; j++)
             {
-                for (int j = 0; j < 3; j++)
+                storenumberonly[j] = double.Parse(storenumber[j]);
+            }
+
+            double max = storenumberonly[0];
+            double min = storenumberonly[0];
+            double total = 0;
+
+
+            bool InvalidMode = false;
+            while (InvalidMode == false)
+            {
+                string Find = "0";
+                Find = Console.ReadLine();
+                for (int m = 0; m < storenumberonly.Length; m++)
                 {
-                    newnumberintput19[i, j] = numberinput09[i, j];
-                    if (numberinput09[i, j] == ifihaveanumberyet)
-                    {
-                        Available = "The number is available";
-                        Console.WriteLine(Available);
-                    }
-                    else if (numberinput09[i, j] == 0)
-                    {
-                        newnumberintput19[i, j] = ifihaveanumberyet;
-                    }
+                    if (max < storenumberonly[m])
+                    { max = storenumberonly[m]; }
+                    if (min > storenumberonly[m])
+                    { min = storenumberonly[m]; }
+                    total += storenumberonly[m];
                 }
-            }
-            if (Available == "The number is available")
-            {
-                Console.ReadLine();  
-            }
-            else 
-            {
-                for (int m = 0; m < 3; m++)
+                double mean = total / storenumberonly.Length;
+                if (Find == "FindMax")
                 {
-                    for (int n = 0; n < 3; n++)
-                    {
-                        Console.Write(newnumberintput19[m, n] + " ");
-                    }
-                    Console.WriteLine();
+                    Console.WriteLine(max);
+                    InvalidMode = true;
                 }
+                else if (Find == "FindMim")
+                {
+                    Console.WriteLine(min);
+                    InvalidMode = true;
+                }
+                else if (Find == "FindMean")
+                {
+                    Console.WriteLine(mean);
+                    InvalidMode = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid mode");
+                }
+
             }
-            
         }
     }
 }
